@@ -20,7 +20,7 @@
         {% endif %}
       </div>
       <time class="page__header-time">
-        Last edit {{ (page.body.time / 1000)  | date("M d Y") }}
+        Last edit {{ (page.body.time / 1000)  | date("Y-m-d") }}
       </time>
       {% if isAuthorized == true %}
         {% include 'components/button.twig' with {label: 'Edit', icon: 'pencil', size: 'small', url: '/page/edit/' ~ page._id, class: 'page__header-button'} %}
